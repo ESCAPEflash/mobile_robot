@@ -3,7 +3,7 @@
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find differntial_drive_car)/world/diff_bot.world" /> 
-  <--! <arg name="world_name" value="$(find differntial_drive_car)/world/gazebo_world.world" /> !-->
+  <!-- <arg name="world_name" value="$(find differntial_drive_car)/world/gazebo_world.world" /> -->
   </include>
 
   <param name="robot_description" command="$(find xacro)/xacro '$(find differntial_drive_car)/urdf/$(arg model).xacro'" />
