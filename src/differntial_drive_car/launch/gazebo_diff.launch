@@ -1,0 +1,18 @@
+<launch>
+  <arg name="model" default="diffrential_bots" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- <arg name="world_name" value="$(find differntial_drive_car)/world/diff_bot.world" /> -->
+    <arg name="world_name" value="$(find differntial_drive_car)/world/gazebo_world.world" />
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find differntial_drive_car)/urdf/$(arg model).xacro'" />
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -param robot_description -model $(arg model)" />
+
+   <node name="joint_states_listener_node" pkg="differntial_drive_car" type="cmd_vel_publisher.py" output="screen">
+    <remap from="joint_states" to="custom_joint_states_topic"/>
+  </node>
+
+
+</launch>

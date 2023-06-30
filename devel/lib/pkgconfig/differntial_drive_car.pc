@@ -1,0 +1,8 @@
+prefix=/home/ujjawal/ws3/devel
+
+Name: differntial_drive_car
+Description: Description of differntial_drive_car
+Version: 0.0.0
+Cflags: -I/home/ujjawal/ws3/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

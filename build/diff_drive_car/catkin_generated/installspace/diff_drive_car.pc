@@ -1,0 +1,8 @@
+prefix=/home/ujjawal/ws3/install
+
+Name: diff_drive_car
+Description: Description of diff_drive_car
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

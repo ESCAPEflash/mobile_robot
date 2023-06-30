@@ -1,0 +1,19 @@
+<launch>
+	<!-- start the rviz node -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find differntial_drive_car)/config/diff_drive_rviz.rviz" />
+	
+	<!-- load the urdf -->
+	<param name="robot_description" textfile="$(find differntial_drive_car)/urdf/differntial_drive_description_urdf.urdf.xacro" />
+	
+	<!-- spawn the model -->
+	
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+	
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+	<node name="joint_states_listener_node" pkg="differntial_drive_car" type="cmd_vel_publisher.py" output="screen">
+    	<remap from="joint_states" to="custom_joint_states_topic"/>
+  	</node>
+
+	
+</launch>
