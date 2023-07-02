@@ -61,7 +61,7 @@ step 6: open another terminal and run the teleop_twist_keyborad node this will h
 And that's it you can run your car using you keyboard.
 
 *I used "articualted robotics" youtube channel to learn about creation of mobile robots using urdf you can visit them too if you want to learn and create your own 
-mobile robots. link for playlist:
+mobile robots. link for playlist: "https://www.youtube.com/watch?v=OWeLUSzxMsw&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT"
 
 *this project is still under development so you can expect many more changes in future.
 
